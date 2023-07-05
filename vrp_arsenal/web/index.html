@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" 
+            crossorigin="anonymous">
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+        <div class="main">
+            
+            <div class="header">
+                <div class="option">
+                    <button id="armamentos" class="active" onclick="active(this);armamentos()">ARMAMENTOS</button>
+                    <button class="armamentos" onclick="active(this);guardar()">GUARDAR ARMAS</button>
+                    <button class="armamentos" onclick="active(this);guardarColete()">GUARDAR COLETE</button>
+                </div>
+                <button class="fechar" onclick="fechar()">
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+            </div>
+
+            <div class="quadrado-main">
+
+                <div class="quadrado">
+                    <div class="header-q">
+                        <p class="q-text">Glock</p>
+                        <p class="info">Munições: 200</p> 
+                    </div>
+                    <img class="i-q" src="http://189.101.240.72:80/cidade/arsenal/glock.png" style="width: 8vw;">
+                    <div class="buttons">
+                        <button class="equipar" onclick="equipar(`glock`)">EQUIPAR</button>
+                    </div>
+                </div>
+
+                <div class="quadrado">
+                    <div class="header-q">
+                        <p class="q-text">Deagle</p>
+                        <p class="info">Munições: 200</p> 
+                    </div>
+                    <img class="i-q" src="http://189.101.240.72:80/cidade/arsenal/deserteagle.png" style="width: 8vw;">
+                    <div class="buttons">
+                        <button class="equipar"  onclick="equipar(`desert`)">EQUIPAR</button>
+                    </div>
+                </div>
+
+                <div class="quadrado">
+                    <div class="header-q">
+                        <p class="q-text">MPX</p>
+                        <p class="info">Munições: 200</p> 
+                    </div>
+                    <img class="i-q" src="http://189.101.240.72:80/cidade/arsenal/mpx.png" style="width: 8vw;">
+                    <div class="buttons">
+                        <button class="equipar" onclick="equipar(`mpx`)" ">EQUIPAR</button>
+                    </div>
+                </div>
+
+                <div class="quadrado">
+                    <div class="header-q">
+                        <p class="q-text">Carbine Rifle</p>
+                        <p class="info">Munições: 200</p> 
+                    </div>
+                    <img class="i-q" src="http://189.101.240.72:80/cidade/arsenal/scar.png" style="width: 8vw;">
+                    <div class="buttons">
+                        <button class="equipar" onclick="equipar(`scar`)">EQUIPAR</button>
+                    </div>
+                </div>
+
+                <div class="quadrado">
+                    <div class="header-q">
+                        <p class="q-text">Sig Sauer</p>
+                        <p class="info">Munições: 200</p> 
+                    </div>
+                    <img class="i-q" src="https://cdn.discordapp.com/attachments/992580425958572092/996975609676836985/Sub_Machine_Gun.H05.2k.png" style="width: 8vw;">
+                    <div class="buttons">
+                        <button class="equipar" onclick="equipar(`sig`)">EQUIPAR</button>
+                    </div>
+                </div>
+
+                <div class="quadrado">
+                    <div class="header-q">
+                        <p class="q-text">Shotgun</p>
+                        <p class="info">Munições: 200</p> 
+                    </div>
+                    <img class="i-q" src="http://189.101.240.72:80/cidade/arsenal/shotgun.png" style="width: 8vw;">
+                    <div class="buttons">
+                        <button class="equipar" onclick="equipar(`shotgun`)">EQUIPAR</button>
+                    </div>
+                </div>
+
+                <div class="quadrado">
+                    <div class="header-q">
+                        <p class="q-text">Kit</p>
+                        <p class="info">Rádio, Badagem & Energético</p> 
+                    </div>
+                    <img class="i-q" src="http://189.101.240.72:80/cidade/arsenal/kitinicial.png" style="width: 8vw;">
+                    <div class="buttons">
+                        <button class="equipar"onclick="equipar(`kit`)">EQUIPAR</button>
+                    </div>
+                </div>
+
+                <div class="quadrado">
+                    <div class="header-q">
+                        <p class="q-text">Colete</p>
+                        <p class="info">Proteção nunca é demais!</p> 
+                    </div> 
+                    <img class="i-q" src="http://189.101.240.72:80/cidade/arsenal/colete.png" style="width: 8vw;">
+                    <div class="buttons">
+                        <button class="equipar"onclick="colete()">EQUIPAR</button>
+                    </div>
+                </div>
+
+                <div class="quadrado">
+                    <div class="header-q">
+                        <p class="q-text">Tazer</p>
+                        <p class="info">Use com moderação (ou não)</p> 
+                    </div> 
+                    <img class="i-q" src="http://189.101.240.72:80/cidade/arsenal/taser.png" style="width: 8vw;">
+                    <div class="buttons">
+                        <button class="equipar"onclick="equipar(`taser`)">EQUIPAR</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="favoritos-main" style="display: none;"></div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>

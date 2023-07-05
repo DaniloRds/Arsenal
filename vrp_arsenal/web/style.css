@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+@font-face {
+    font-family: fonte;
+    src: url(https://fontsfree.net//wp-content/fonts/basic/sans-serif//FontsFree-Net-Geometria-ExtraBold.ttf);
+}
+
+:root {
+  --maincolor: #66008e;
+  --secondarycolor: #f5edfa;
+  --hovercolor: #630067;
+  --bordercolor: #e9c9f8;
+  --pressedcolor: #570b57;
+  --focuscolor: #ab3fa4;
+  --filtercolor: #ff00e13a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to bottom, #570b57, transparent);
+  border-radius: 0.6vh;
+}
+
+::-webkit-scrollbar {
+  background: rgba(0, 0, 0, 0.281);
+  height: .4vh;
+  position: absolute;
+  width: .4vh;
+}
+
+* {
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  font-style: normal;
+  font-family: 'Montserrat';
+  margin: 0;
+  transition: all 5 ease;
+  text-decoration: none;
+  list-style: none;
+  letter-spacing: 0.05vh;
+  resize: none;
+  outline: none;
+  border: 0;
+  user-select: none;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  justify-content: center;
+}
+
+.main {    
+    display: flex;
+    width: 60vw;
+    height: 42vw;
+    background-color: #202020;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    transition: all 1s ease;
+}
+
+.header {
+    display: flex;
+    width: 95%;
+    height: 5vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fechar {
+    width: 3vw;
+    height: 2.3vw;
+    background-color: transparent;
+    border: 1px solid #570b57;
+    color: white;
+    font-size: 1.5vw;
+    border-radius: 3px;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 14px transparent);
+}
+
+.fechar:after {
+    width: 0%;
+    height: 100%;
+    transition: all 250ms;
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    background: #570b57;
+    top: 0;
+}
+
+.fechar:hover:after {
+    width: 100%;
+}
+
+.option {
+    display: flex;
+}
+
+.armamentos, #armamentos {
+    display: flex;
+    width: 8vw;
+    height: 2.3vw;
+    background-color: transparent;
+    border: 1px solid  #570b57;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: .8vw;
+    cursor: pointer;
+    margin: 14px;
+    filter: drop-shadow(0px 0px 14px transparent);
+}
+
+.armamentos:after {
+    width: 0%;
+    height: 100%;
+    transition: all 250ms;
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    background: #570b57;
+    top: 0;
+}
+
+.armamentos:hover:after {
+    width: 100%;
+}
+
+#armamentos:after {
+    width: 0%;
+    height: 100%;
+    transition: all 250ms;
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    background:#570b57;
+    top: 0;
+}
+
+#armamentos:hover:after {
+    width: 100%;
+}
+
+.quadrado-main, .favoritos-main {
+    display: flex;
+    width: 95%;
+    height: 85%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+.quadrado {
+    display: flex;
+    width: 17vw;
+    height: 17vw;
+    background-color: rgba(0, 0, 0, 0.664);
+    margin: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-image: radial-gradient(circle at 100% 100%, transparent 0px, #570b57 0px, #570b57 1px, transparent 1px), linear-gradient(to right, #570b57, transparent), radial-gradient(circle at 0% 100%, transparent 0px, transparent 0px, transparent 1px, transparent 1px), linear-gradient(to bottom, transparent, #570b57), radial-gradient(circle at 0% 0%, transparent 0px, #570b57 0px, #570b57 1px, transparent 1px), linear-gradient(to left, #570b57, transparent), radial-gradient(circle at 100% 0%, transparent 0px, transparent 0px, transparent 1px, transparent 1px), linear-gradient(to top, transparent, #570b57);
+    background-size: 1px 1px, calc(100% - 2px) 1px, 1px 1px, 1px calc(100% - 2px);
+    background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;
+    background-repeat: no-repeat;
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    height: 4vw;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header-q {
+    display: flex;
+    width: 90%;
+    height: 3vw;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.q-text {
+    color: white;
+    font-family: 'Poppins';
+    font-size: .8vw;
+}
+
+.info {
+    color: rgb(180, 180, 180);
+    font-family: 'Poppins';
+    font-size: .7vw;
+}
+
+.baixo {
+    display: flex;
+    width: 95%;
+    height: 4vw;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.baixo-text {
+    color: white;
+    font-size: .8vw;
+    font-family: 'Montserrat';
+}
+
+.dc {
+    color: rgb(179, 179, 179);
+    font-family: 'Poppins';
+    font-size: .8vw;
+}
+
+.equipar {
+    display: flex;
+    width: 7vw;
+    height: 2.3vw;
+    align-items: center;
+    justify-content: center;
+    font-size: .8vw;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #460646;
+    transition: all 0.5s ease;
+}
+
+.equipar:hover {
+    background-color: #570b57;
+}
+
+.active {
+    background-color: #570b57 !important;
+}
