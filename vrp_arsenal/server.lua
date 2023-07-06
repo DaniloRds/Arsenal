@@ -9,6 +9,12 @@ Tunnel.bindInterface(GetCurrentResourceName(),src)
 
 local Config = module(GetCurrentResourceName(),"config")
 
+function SendWebhookMessage(webhook,message)
+	if webhook ~= nil and webhook ~= "" then
+		PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({content = message}), { ['Content-Type'] = 'application/json' })
+	end
+end
+
 --
 
 local items = {
@@ -37,13 +43,16 @@ end
 function src.buy(name)
     local source = source
 	local user_id = vRP.getUserId(source)
+    local time = false
     if user_id then
         if name ~= "kit" then
             TriggerClientEvent("Notify", source, "sucesso","Você equipou 1x <b>"..name.."</b>")
             vRPclient.giveWeapons(source,{[items[name]] = { ammo = Config.Ammo }})
+            SendWebhookMessage(Config.webhookArmas, "```\nARMAS\n[ID]: "..user_id.." \n[PEGOU X1]: "..name.." ```")
         else
             TriggerClientEvent("Notify", source, "sucesso","Você pegou um <b>Kit</b>")
-
+            SendWebhookMessage(Config.webhookKit, "```\nKIT BÁSICO \nID: ["..user_id.."] - PEGOU 1x KIT```")
+            time = true
             -- ITENS QUE VEM NO KIT
             vRP.giveInventoryItem(user_id,"radio",1)
             vRP.giveInventoryItem(user_id,"bandagem",3)
