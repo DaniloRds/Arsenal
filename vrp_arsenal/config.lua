@@ -6,4 +6,8 @@ Config.Coords = { -- Localização do arsenal. (Para obter as coordenadas basta 
 	{ 18.31, -1110.92, 29.8 }
 }
 
+-- WEBHOOK
+Config.webhookArmas = '' -- webhook armas
+Config.webhookKit = '' -- webhook kit
+
 return Config
