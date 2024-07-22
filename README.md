@@ -1,9 +1,10 @@
-# Arsenal 
-
 <div align="left">
-<img src="https://media.discordapp.net/attachments/994263910926528532/1126253564742860810/image.png?width=676&height=473" width="400px" />
-<img src="https://media.discordapp.net/attachments/994263910926528532/1126253672905572482/image.png?width=676&height=473" width="400px" />
+  
+![image](https://github.com/user-attachments/assets/7e9fc59b-a1db-4176-972b-decd08bd9496)
+![image](https://github.com/user-attachments/assets/809e9a8e-7bbe-49ef-8046-5535c81b8711)
+
 </div>
+
 
 # Descrição
 
